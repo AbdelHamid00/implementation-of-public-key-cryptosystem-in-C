@@ -1,6 +1,6 @@
 I implemented public-key cryptosystem, based of RSA algorithme.
 
-## Quick arithmetiques reminder and friendly difinitions and links of ressources :
+## Quick reminder: 
 A prime number is a natural number that has exactly two distinct natural number divisors: 1 and itself and all prime numbers are grater than 1 and impair . https://en.wikipedia.org/wiki/Prime_number.
 
 The fundamental theorem of arithmetic states that every integer larger than 1 can be written as a product of one or more primes. Writing a number as a product of prime numbers is called a prime factorization of the number. For example: 34866 = 2 * 3 * 3 * 13 * 149.
