@@ -51,15 +51,10 @@ GCD(1234, 124) = GCD(124, 118) = GCD(118, 6) = GCD(6, 4) = GCD(4, 2) = 2 .
 another approach to see it :
 
 1234 = 9 * 124 + 118
-
 124 = 1 * 118 + 6
-
 118 = 19 * 6 + 4
-
 6 = 1 * 4 + 2
-
 4 = 2 * 2 + 0
-
 GCD is the last no null reminder , GCD(a,b) = 2
 
 the Extended Euclidean algorithm includes the simple one that only computes the GCD(e, f) and calculate the Bézout's identity of e whitch is d .
@@ -68,33 +63,21 @@ example :
 to find the Bézout's identity (u,v). 1234 * u + 124 * v = GCD(1234, 124) manually , lets take the previous approche of the Euclidean algorithm and  go back from the last no null reminder expression replace the quotient by his expression before and that gives as an outher quotient to replace ..., at the end we get the expression with 1234 and 124 and Bezout identity.
 
 2 = 6 - 1 * 4
-
 2 = 6 - (118 - 19 * 6)
-
 2 = - 118 + 20 * 6
-
 2 = - 118 + 20 * (124 - 118)
-
 2 = 20 * 124 - 21 * 118
-
 2 = 20 * 124 - 21 * (1234 - 9 * 124)
-
 2 = 124 * (21 * 9 + 20) - 21 * 1234
-
 2 = 124 * 209 - 21 * 1234
-
 for this example (u,v) = (-21, 209).
 
 to compute that we use the simple Euclidean Algorithm and three Sequences U and V and Q , U and V gets the Bezout identity at the end of the computation of two sequences A and B :
 
 A(0) = a , A(n + 1) = B(n)
-
 B(0) = b , B(n + 1) = A(n) % B(n)
-
 Q(n) = A(n) / B(n)
-
 U(0) = 1 , U(1) = 0 and U(n + 1) =  U(n - 1) - U(n) * Q(n)
-
 V(0) = 0 , U(1) = 1 and V(n + 1) =  V(n - 1) - V(n) * Q(n)
 
 finally lets prepare the keys, public key file (16bytes) containe e and n [8bytes = e][8bytes = n], 
