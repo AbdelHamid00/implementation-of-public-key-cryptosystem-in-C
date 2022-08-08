@@ -2,7 +2,7 @@ I implemented public-key cryptosystem, based of RSA algorithme.
 
 ## Quick arithmetiques reminder and friendly difinitions and links of ressources :
 A prime number is a natural number that has exactly two distinct natural number divisors: 1 and itself and all prime numbers are grater than 1 and impair . https://en.wikipedia.org/wiki/Prime_number.
-/ the fundamental theorem of arithmetic states that every integer larger than 1 can be written as a product of one or more primes. Writing a number as a product of prime numbers is called a prime factorization of the number. For example: 34866 = 2 * 3 * 3 * 13 * 149.
+The fundamental theorem of arithmetic states that every integer larger than 1 can be written as a product of one or more primes. Writing a number as a product of prime numbers is called a prime factorization of the number. For example: 34866 = 2 * 3 * 3 * 13 * 149.
 / a divide b, means that existe a natural number k that b = a*k .
 / The greatest common divisor (GCD) of two nonzero integers a and b is the greatest positive integer d such that d is a divisor of both a and b; that is, there are integers e and f such that a = d*e and b = d*f, and d is the largest such integer. The GCD of a and b is generally denoted gcd(a, b).example :
 54 = 2 * 3 * 3 * 3 and 24 = 2 * 2 * 2 * 3 so the gcd(54, 24) = 2 * 3 = 6
