@@ -20,10 +20,12 @@ clean_crypt :
 	rm -rf crypt
 re_crypt : clean_crypt crypt
 
-${tree} :
+${three} :
 	gcc ${DECRYPT} -o decrypt  
 clean_decrypt :
 	rm -rf decrypt
 re_decrypt : clean_decrypt decrypt
 
 clean : clean_crypt clean_decrypt clean_key
+
+all : ${one} ${two} ${three}
