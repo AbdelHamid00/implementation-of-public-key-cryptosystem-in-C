@@ -6,7 +6,7 @@ DECRYPT = main_decryption.c geting_value_from_keys.c crypting_decrypting.c files
 
 one = key
 two = crypt
-tree = decrypt
+three = decrypt
 
 ${one} :
 	gcc ${KEYS} -o keys ; ./keys
@@ -28,4 +28,4 @@ re_decrypt : clean_decrypt decrypt
 
 clean : clean_crypt clean_decrypt clean_key
 
-all : ${one} ${two} ${three}
+all : clean ${one} ${two} ${three}
