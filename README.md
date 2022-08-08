@@ -88,9 +88,13 @@ for this example (u,v) = (-21, 209).
 to compute that we use the simple Euclidean Algorithm and three Sequences U and V and Q , U and V gets the Bezout identity at the end of the computation of two sequences A and B :
 
 A(0) = a , A(n + 1) = B(n)
+
 B(0) = b , B(n + 1) = A(n) % B(n)
+
 Q(n) = A(n) / B(n)
+
 U(0) = 1 , U(1) = 0 and U(n + 1) =  U(n - 1) - U(n) * Q(n)
+
 V(0) = 0 , U(1) = 1 and V(n + 1) =  V(n - 1) - V(n) * Q(n)
 
 finally lets prepare the keys, public key file (16bytes) containe e and n [8bytes = e][8bytes = n], 
