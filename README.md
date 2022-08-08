@@ -1,33 +1,11 @@
-I implemented public-key cryptosystem, based of RSA algorithme.
+## Simple implementation of  public-key cryptosystem, based of RSA algorithme.
+there is three programes, the first generate the Keys and the second crypte a message and the last decrypte it .
 
-## Quick reminder: 
-A prime number is a natural number that has exactly two distinct natural number divisors: 1 and itself and all prime numbers are grater than 1 and impair . https://en.wikipedia.org/wiki/Prime_number.
+To compile the three binary programes : Run the commande [make key ; make crypt ; make decrypt]
 
-The fundamental theorem of arithmetic states that every integer larger than 1 can be written as a product of one or more primes. Writing a number as a product of prime numbers is called a prime factorization of the number. For example: 34866 = 2 * 3 * 3 * 13 * 149.
+To crypt a message , write it in a file then Run this commande using the message file and the shosen public_key : [./crypt message_file key_file]
 
-a divide b, means that existe a natural number k that b = a*k .
-
-The greatest common divisor (GCD) of two nonzero integers a and b is the greatest positive integer d such that d is a divisor of both a and b; that is, there are integers e and f such that a = d*e and b = d*f, and d is the largest such integer. The GCD of a and b is generally denoted gcd(a, b).example :
-54 = 2 * 3 * 3 * 3 and 24 = 2 * 2 * 2 * 3 so the gcd(54, 24) = 2 * 3 = 6
-
-another approach to see it :
-
-Thus the complete list of divisors of 54 is {1,2,3,6,9,18,27,54} Similarly, the divisors of 24 are 1,2,3,4,6,8,12,24}. The numbers that these two lists have in common are the common divisors of 54 and 24, that is, {1,2,3,6}.
-
-Of these, the greatest is 6, so it is the greatest common divisor: gcd(54,24) = 6.
-
-https://en.wikipedia.org/wiki/Greatest_common_divisor
-
-/ In mathematics, two integers a and b are coprime, relatively prime or mutually prime if the only positive integer that is a divisor of both of them is 1. Consequently, any prime number that divides a does not divide b, and vice versa. This is equivalent to their greatest common divisor (GCD) being 1. One says also a is prime to b or a is coprime with b. example :
-
-3 and 5 , two prime numbers and GCD(3,5) = 1.
-
-https://en.wikipedia.org/wiki/Coprime_integers
-
-Bézout's identity — Let a and b be integers with greatest common divisor d. Then there exist integers x and y such that ax + by = d. Moreover, the integers of the form az + bt are exactly the multiples of d.
-
-https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity
-
+To decrypt a message , Run this commande using the crypted file and the shosen privat key : [./decrypt message_file key_file]
 
 ## the Key programme :
 the key programme generate 3 numbers (e and n and d), represent them in two files of size 16 bytes, key_rsa and key_rsa.pub , key_rsa containe d and n (private key), key_rsa.pub containe e and n (public key).
@@ -100,7 +78,7 @@ V(0) = 0 , U(1) = 1 and V(n + 1) =  V(n - 1) - V(n) * Q(n)
 finally lets prepare the keys, public key file (16bytes) containe e and n [8bytes = e][8bytes = n], 
                               privat key file (16bytes) containe d and n [8bytes = d][8bytes = n].
 
-## crypt and decrypt programme : 
+## crypt and decrypt programmes : 
 lets say me and Aimad we want to start a conversation , first we need to generate our keys then send our public key to each other. 
 Now Aimad open a file using text editeur and write a message and crypt it using my public key and send it to me.
 
@@ -119,15 +97,21 @@ i get d and n from my privat key file . and start decrypting it, i read read the
 [m bytes of the crypted message] -----------> [m - 1 bytes of the decrypted message]
 
 the calculation give as a number of range n (m bytes) so why we can storet in m - 1 bytes? because the decryption give as the original value that can be stored in m - 1.
-
-## how i calculate a power of e or d modulo n efficiently using Modular exponentiation:
-lets begin with an exemple 
+## how to calculate exponentiation performed over a modulus efficiently :
 
 
-## extra ressources :
+## Ressources to more understand the maths behind it:
+what is a prime number ? https://en.wikipedia.org/wiki/Prime_number.
+
+GCD(a,b), what does it mean? https://en.wikipedia.org/wiki/Greatest_common_divisor
+
+two integers a and b are coprime, what does it mean ? https://en.wikipedia.org/wiki/Coprime_integers
+
+The Bézout's identity  https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity
+
 to read more about the simple Euclidean Algorithm and the extended : https://en.wikipedia.org/wiki/Euclidean_algorithm - https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm
 
-to read about the modular exponentiation : https://en.wikipedia.org/wiki/Modular_exponentiation
+to read about the modular exponentiation and understand how to calculate exponentiation performed over a modulus efficiently : https://en.wikipedia.org/wiki/Modular_exponentiation
 
 
 
