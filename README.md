@@ -1,7 +1,7 @@
 ## Simple implementation of  public-key cryptosystem, based of RSA algorithme.
 there is three programes, the first generate the Keys and the second crypte a message and the last decrypte it .
 
-To compile the three binary programes : Run the commande [make key ; make crypt ; make decrypt]
+To compile the three binary programes : Run the commande [make all]
 
 To crypt a message , write it in a file then Run this commande using the message file and the shosen public_key : [./crypt message_file key_file]
 
