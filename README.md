@@ -97,8 +97,6 @@ i get d and n from my privat key file . and start decrypting it, i read read the
 [m bytes of the crypted message] -----------> [m - 1 bytes of the decrypted message]
 
 the calculation give as a number of range n (m bytes) so why we can storet in m - 1 bytes? because the decryption give as the original value that can be stored in m - 1.
-## how to calculate exponentiation performed over a modulus efficiently :
-
 
 ## Ressources to more understand the maths behind it:
 what is a prime number ? https://en.wikipedia.org/wiki/Prime_number.
