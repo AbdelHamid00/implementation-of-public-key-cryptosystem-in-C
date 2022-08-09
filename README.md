@@ -45,6 +45,10 @@ I get d and n from my private key file, then I start decrypting it : starting fr
 
 The calculation gives a number of range n (m bytes). So why this time we can store it in m - 1 bytes? Because the decryption gives us the original value that can be stored in m - 1.
 
+## Why it is possible :
+Proofs of correctness : https://en.wikipedia.org/wiki/RSA_(cryptosystem)#Proofs_of_correctness 
+
+
 ## Resources to grasp the math behind it:
 
 what is a prime number? https://en.wikipedia.org/wiki/Prime_number 
@@ -59,5 +63,9 @@ About the extended Euclidean Algorithm : video : https://www.youtube.com/watch?v
 
 To read about the modular exponentiation and understand how to calculate exponentiation performed over a modulus efficiently : https://en.wikipedia.org/wiki/Modular_exponentiation
 
+To learn more read the subject in the PDF accompanying the files in this repo.
 
+#####################################################################################################################################################.
+
+Thanks for your attention, and I hope you learned something.
 
