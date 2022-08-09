@@ -65,7 +65,7 @@ To read about the modular exponentiation and understand how to calculate exponen
 
 To learn more read the subject in the PDF accompanying the files in this repo.
 
-#####################################################################################################################################################.
+############################################################################## 
 
 Thanks for your attention, and I hope you learned something.
 
