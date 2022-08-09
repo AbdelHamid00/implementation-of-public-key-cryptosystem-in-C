@@ -18,7 +18,8 @@ then calculate [n = p * q] and [f = (p - 1)*(q - 1)]
 
 e is coprime with f . To find e and d i initialize e with max(p,q) , why max(p,q)? to stay in the same range and keep it hard to reverse. I iterate e tel GCD(e,f) = 1 and d > 0,  using Extended Euclidean algorithm.
 
-finally lets prepare the keys, public key file (16bytes) containe e and n [8bytes = e][8bytes = n], 
+finally lets prepare the keys, public key file (16bytes) containe e and n [8bytes = e][8bytes = n],
+
                               privat key file (16bytes) containe d and n [8bytes = d][8bytes = n].
 
 ## crypt and decrypt programmes : 
