@@ -12,7 +12,7 @@ the key programme generate 3 numbers (e and n and d), represent them in two file
 
 How I did it ?
 
-I generate two prime numbers of 5 digits using Rand function and change the argument seed using Srand function with time as parameter , so every second the rand generate a different number.
+I generate two prime numbers p and q of 5 digits using Rand function and change the argument seed using Srand function with time as parameter , so every second the rand generate a different number.
 
 then I calculate [n = p * q] and [f = (p - 1)*(q - 1)]
 
