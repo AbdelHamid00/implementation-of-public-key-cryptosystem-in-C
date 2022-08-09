@@ -22,7 +22,7 @@ finally lets put the keys in their files (accordingly).
                               
                               public key file (16bytes) contain e and n [8bytes = e][8bytes = n],
 
-                              privat key file (16bytes) contain d and n [8bytes = d][8bytes = n].
+                              private key file (16bytes) contain d and n [8bytes = d][8bytes = n].
 
 ## crypt and decrypt programs : 
 lets say me and Jim want to start a conversation, first we need to generate our keys then send our public key to each other.
@@ -33,31 +33,31 @@ I receive it and decrypt it using my own private key.
 
 m is the bytes's range of n. For example 2 is the bytes's range of 257 because it occupies 2 bytes in memory.
 
-how Jim crypted the message? , first he gets e and n from my public key file, he reads the message from the end and gets the value M of every m - 1 byte, and computes M power of e modulo n and gets the crypted value then store it in m byte in the crypted message .
+how Jim crypted the message? , first he gets e and n from my public key file, he reads the message from the end and gets the value M of every m - 1 byte, and computes M power of e modulo n and obtains the crypted value then stores it in m byte in the crypted message .
 
                     [m - 1 bytes of the message] -----------> [m bytes of the crypted message]
 
 why exactly m - 1 bytes become m bytes? because the result of the calculation give as a number of range of n whitch is m .
 
-I get d and n from my privat key file . and start decrypting it, I read the crypted message from the end and get the value C of every m byte, and computes C power of d modulo n and gets the original value then store it in the 
+I get d and n from my private key file, then I start decrypting it : starting from the end I get the value C of every m byte (always starting from the end), and I compute C power of d modulo n after that I obtain the original value then I store it in the decrypted message.
 
                     [m bytes of the crypted message] -----------> [m - 1 bytes of the decrypted message]
 
-the calculation give as a number of range n (m bytes) so why we can storet in m - 1 bytes? because the decryption give as the original value that can be stored in m - 1.
+The calculation gives a number of range n (m bytes). So why this time we can store it in m - 1 bytes? Because the decryption gives us the original value that can be stored in m - 1.
 
-## Ressources to more understand the maths behind it:
+## Resources to grasp the math behind it:
 
-what is a prime number ? https://en.wikipedia.org/wiki/Prime_number 
+what is a prime number? https://en.wikipedia.org/wiki/Prime_number 
 
 GCD(a,b), what does it mean? https://en.wikipedia.org/wiki/Greatest_common_divisor
 
-two integers a and b are coprime, what does it mean ? https://en.wikipedia.org/wiki/Coprime_integers
+a is coprime with b, what does it mean? https://en.wikipedia.org/wiki/Coprime_integers
 
 The Bézout's identity  https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity
 
-about the extended Euclidean Algorithm : video : https://www.youtube.com/watch?v=IwRtISxAHY4 , Documentation :https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm
+About the extended Euclidean Algorithm : video : https://www.youtube.com/watch?v=IwRtISxAHY4 , Documentation :https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm
 
-to read about the modular exponentiation and understand how to calculate exponentiation performed over a modulus efficiently : https://en.wikipedia.org/wiki/Modular_exponentiation
+To read about the modular exponentiation and understand how to calculate exponentiation performed over a modulus efficiently : https://en.wikipedia.org/wiki/Modular_exponentiation
 
 
 
