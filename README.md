@@ -39,9 +39,9 @@ how Jim crypted the message? , first he gets e and n from my public key file, he
 
 why exactly m - 1 bytes become m bytes? because the result of the calculation give as a number of range of n whitch is m .
 
-i get d and n from my privat key file . and start decrypting it, i read read the crypted message from the end and get the value of every m bytes, and calculate the value power of d modulo n, and storet in m - 1 bytes in the decrypted message .
+I get d and n from my privat key file . and start decrypting it, I read the crypted message from the end and get the value C of every m byte, and computes C power of d modulo n and gets the original value then store it in the 
 
-[m bytes of the crypted message] -----------> [m - 1 bytes of the decrypted message]
+                    [m bytes of the crypted message] -----------> [m - 1 bytes of the decrypted message]
 
 the calculation give as a number of range n (m bytes) so why we can storet in m - 1 bytes? because the decryption give as the original value that can be stored in m - 1.
 
