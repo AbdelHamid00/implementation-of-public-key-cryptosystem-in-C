@@ -63,7 +63,7 @@ About the extended Euclidean Algorithm : video : https://www.youtube.com/watch?v
 
 To read about the modular exponentiation and understand how to calculate exponentiation performed over a modulus efficiently : https://en.wikipedia.org/wiki/Modular_exponentiation
 
-To learn more read the subject in the PDF accompanying the files in this repo.
+To learn more read the PDF accompanying the files in this repo.
 
 ############################################################################## 
 
