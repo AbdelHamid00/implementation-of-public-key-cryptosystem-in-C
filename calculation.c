@@ -79,7 +79,7 @@ unsigned long long  int  prime(void)
     while(1)
     {
         srand(time(NULL));
-        number = rand() % 99999;
+        number = rand() % 99900;
         if (ft_is_prime(number))
             break;
     }
