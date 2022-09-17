@@ -1,20 +1,28 @@
-## Simple implementation of  public-key cryptosystem, based of RSA algorithm.
+# Simple implementation of RSA algorithm.
 there is three programs, the first generate the Keys and the second crypt a message and the last decrypt it .
 
-To compile the three programes : Run the command [make all]
-
-To crypt a message , write it in a file then Run this command using the message file and the chosen public_key : [./crypt message_file key_file]
-
-To decrypt a message , Run this command using the crypted file and the chosen private key : [./decrypt message_file key_file]
-
+To compile the three programes : Run the command:
+```bash
+make all
+```
+To crypt a meesage, create two files (one for the meesage and one for the key) and feed them to the crypt binary:
+```bash
+./crypt message_file key_file
+```
+To decrypt a message, do the same but this time with the decrypt binary:
+```bash
+./decrypt message_file key_file
+```
 ## the Key program :
 the key programme generate 3 numbers (e and n and d), represent them in two files of size 16 bytes, key_rsa and key_rsa.pub , key_rsa contain d and n (private key), key_rsa.pub contain e and n (public key).
 
 How I did it ?
 
-I generate two prime numbers p and q of 5 digits using Rand function and change the argument seed using Srand function with time as parameter , so every second the rand generate a different number.
+I generate two prime numbers p and q of 5 digits using Rand function and change the argument seed using srand function with time as parameter , so every second the rand generate a different number.
 
-then I calculate [n = p * q] and [f = (p - 1)*(q - 1)]
+then I calculate
+
+$n = p * q$ and $f = (p - 1)*(q - 1)$
 
 e is coprime with f. To find e and d I initialize e with max(p,q) , why max(p,q)? to stay in the same range and keep it hard to reverse. I iterate e till GCD(e,f) = 1 and d > 0,  using Extended Euclidean algorithm.
 
